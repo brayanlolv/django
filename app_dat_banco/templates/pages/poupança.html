@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conta Poupança</title>
+  <link rel="stylesheet" href="style/geral.css">
+  <link rel="stylesheet" href="../style/poupanca.css">
+
+  <script>
+    function depositar() {
+      var saldo = document.getElementById("saldo");
+      var valor = parseInt(prompt("Digite o valor a ser depositado:"));
+      saldo.textContent = parseInt(saldo.textContent) + valor;
+    }
+
+    function sacar() {
+      var saldo = document.getElementById("saldo");
+      var valor = parseInt(prompt("Digite o valor a ser sacado:"));
+      var saldoAtual = parseInt(saldo.textContent);
+
+      if (valor > saldoAtual) {
+        alert("Saldo insuficiente!");
+      } else {
+        saldo.textContent = saldoAtual - valor;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Conta Poupança</h1>
+  <p>Saldo: R$ <span id="saldo">0</span></p>
+  <button onclick="depositar()">Depositar</button>
+  <button onclick="sacar()">Sacar</button>
+</body>
+</html>

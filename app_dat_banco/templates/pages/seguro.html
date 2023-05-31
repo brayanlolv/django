@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seguro de Vida</title>
+  <link rel="stylesheet" href="style/geral.css">
+  <link rel="stylesheet" href="../style/seguro.css">
+  <script>
+    function selectPlan(planId) {
+      var plans = document.getElementsByClassName('plan');
+      for (var i = 0; i < plans.length; i++) {
+        plans[i].classList.remove('selected');
+      }
+      var selectedPlan = document.getElementById(planId);
+      selectedPlan.classList.add('selected');
+    }
+    
+    function purchase() {
+      var selectedPlan = document.querySelector('.plan.selected');
+      if (selectedPlan) {
+        var planName = selectedPlan.getAttribute('data-plan-name');
+        alert('Compra realizada com sucesso!\nPlano selecionado: ' + planName);
+      } else {
+        alert('Selecione um plano antes de confirmar a compra.');
+      }
+    }
+    
+    function cancel() {
+      alert('Benefício cancelado com sucesso!');
+    }
+  </script>
+</head>
+<body>
+  <h1>Seguro de Vida</h1>
+  
+  <h2>Escolha o seu plano:</h2>
+  <div class="plan" id="plan1" data-plan-name="Plano A" onclick="selectPlan('plan1')">Plano A: R$ 100/mês</div>
+  <div class="plan" id="plan2" data-plan-name="Plano B" onclick="selectPlan('plan2')">Plano B: R$ 150/mês</div>
+  <div class="plan" id="plan3" data-plan-name="Plano C" onclick="selectPlan('plan3')">Plano C: R$ 200/mês</div>
+  
+  <div>
+    <button class="button" onclick="purchase()">Comprar Seguro</button>
+    <button class="button" onclick="cancel()">Cancelar Benefício</button>
+  </div>
+  
+  <div class="ad">
+    <h3>Anúncio:</h3>
+    <p>Aproveite essa oportunidade única e proteja o seu futuro com nosso seguro de vida! Não deixe para depois, contrate agora mesmo.</p>
+  </div>
+</body>
+</html>

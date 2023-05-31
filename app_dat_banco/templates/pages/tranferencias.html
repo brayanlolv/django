@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Transferência</title>
+  <link rel="stylesheet" href="style/geral.css">
+  <link rel="stylesheet" href="../style/transferencias.css">
+
+</head>
+<body>
+  <h1>Transferência</h1>
+
+  <form action="/realizar_transferencia" method="POST">
+    <label for="origem">Conta de origem:</label>
+    <input type="text" id="origem" name="origem" required>
+
+    <label for="destino">Conta de destino:</label>
+    <input type="text" id="destino" name="destino" required>
+
+    <label for="valor">Valor da transferência:</label>
+    <input type="number" id="valor" name="valor" min="0" required>
+
+    <input type="submit" value="Realizar transferência">
+  </form>
+</body>
+</html>

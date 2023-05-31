@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Transferência PIX</title>
+  <link rel="stylesheet" href="style/geral.css">
+ 
+</head>
+<body>
+    <header>
+        <h1>Data Bank</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  <script>
+    function transferir() {
+      var valorTransferencia = parseFloat(document.getElementById("valor").value);
+      var destinatario = document.getElementById("destinatario").value;
+      var saldo = parseFloat(document.getElementById("saldo").textContent);
+      
+      if (valorTransferencia > saldo) {
+        alert("Saldo insuficiente para a transferência!");
+        return;
+      }
+      
+      // Simulação de lógica de transferência
+      var chaveAleatoria = Math.floor(Math.random() * 1000000) + 1;
+      var mensagem = "Transferência concluída com sucesso para " + destinatario + ". Sua chave PIX para receber o valor é " + chaveAleatoria + ".";
+      
+      // Atualizar saldo e exibir mensagem de confirmação
+      document.getElementById("saldo").textContent = (saldo - valorTransferencia).toFixed(2);
+      document.getElementById("mensagem").textContent = mensagem;
+    }
+  </script>
+</head>
+<body>
+  <h1>Transferência PIX</h1>
+  
+  <p>Saldo: R$ <span id="saldo">800.00</span></p>
+  
+  <label for="valor">Valor da Transferência:</label>
+  <input type="text" id="valor" />
+  
+  <label for="destinatario">Destinatário (E-mail ou Nome):</label>
+  <input type="text" id="destinatario" />
+  
+  <button onclick="transferir()">Transferir</button>
+  
+  <p id="mensagem"></p>
+</body>
+</html>
+

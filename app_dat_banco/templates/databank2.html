@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Bank - Login</title>
+    <link rel="stylesheet" href="style/geral.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #login {
+            margin-top: 50px;
+        }
+
+        #login label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #login input[type="text"], #login input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        #login button[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #info {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 50px;
+        }
+
+        .profile p {
+            margin-bottom: 10px;
+        }
+
+        .balance {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .balance h3 {
+            margin-top: 0;
+        }
+
+        #services {
+            margin-top: 50px;
+        }
+
+        #services ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        #services li {
+            flex-basis: calc(33.33% - 10px);
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        footer li {
+            margin-right: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Bank</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="login">
+	<h2>Login</h2>
+	<form method="post" action="login.php">
+		<label for="username">Nome de usuário:</label>
+		<input type="text" id="username" name="username"><br><br>
+		<label for="password">Senha:</label>
+		<input type="password" id="password" name="password"><br><br>
+		<button><a href="informacoes.html">entrar</a></button>
+	</form>
+        </section>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 300px;
+    height: 180px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  .card .bank-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card .card-number {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: auto;
+    margin-top: 50px;
+  }
+  
+  .card .card-details {
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .card .card-details .card-name {
+    margin-bottom: 5px;
+  }
+  
+  .options {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .option {
+    margin: 0 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
