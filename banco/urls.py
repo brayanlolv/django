@@ -13,4 +13,23 @@ urlpatterns = [
     path('cadastro_submit/',views.cadastro_submit,name='cadastro_submit'),
 
     path('investimentos/',views.investimento_tela,name='investimento_tela'),
+
+    path('emprestimos/',views.emprestimo_tela,name='emprestimo_tela'),
+
+    path('poupanca/',views.poupanca_tela,name='poupanca_tela'),
+
+    path('seguro/',views.seguro,name='seguro'),
+
+    path('transferencia/',views.transferencia,name='transferencia'),
+
+    path('pix/',views.pix,name='pix'),
+
+    path('contas/',views.pagamento_contas,name='contas'),
+
+    path('cartao/',views.cartao,name='cartao'),
+
+    path('login/',views.login_tela,name='login'),
+
+    path('logando/',views.logar,name='logar')
+
 ]

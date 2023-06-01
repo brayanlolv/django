@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Banking Services</title>
-    <link rel="stylesheet" href="style/geral.css">
+    
+    <link rel="stylesheet" href="https://brayanlolv.github.io/prototipo/style/geral.css">
     <link rel="stylesheet" href="https://brayanlolv.github.io/prototipo/index.css">
 </head>
 <body>
@@ -32,14 +33,14 @@
         <section id="services">
             <h2>Services</h2>
             <ul>
-                <li><a href="pages/emprestimo.html" >Emprestimo</a></Emprestimo></li>
-                <li><a href="pages/poupança.html" >Poupança</a></Emprestimo></li>
+                <li><a href="{% url 'emprestimo_tela' %}" >Emprestimo</a></Emprestimo></li>
+                <li><a href="{% url 'poupanca_tela' %}" >Poupança</a></Emprestimo></li>
                 <li><a href="{% url 'investimento_tela' %}" >Investimentos</a></Emprestimo></li>
-                <li><a href="pages/seguro.html" >Seguro</a></Emprestimo></li>
-                <li><a href="pages/tranferencias.html" >Tranferencias</a></Emprestimo></li>
-                <li><a href="/pages/pix.html" >Pix</a></Emprestimo></li>
-                <li><a href="/pages/pagamento-contas.html" >Pagamentos de Contas</a></Emprestimo></li>
-                <li><a href="pages/cartao.html" >Acesso ao Cartão online</a></Emprestimo></li>
+                <li><a href="{% url 'seguro' %}" >Seguro</a></Emprestimo></li>
+                <li><a href= "{% url 'transferencia' %}">Tranferencias</a></Emprestimo></li>
+                <li><a href="{% url 'pix' %}">Pix</a></Emprestimo></li>
+                <li><a href="{% url 'contas' %}" >Pagamentos de Contas</a></Emprestimo></li>
+                <li><a href="{% url 'cartao' %}" >Acesso ao Cartão online</a></Emprestimo></li>
         </ul>
     </section>
     <footer>
